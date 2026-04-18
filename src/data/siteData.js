@@ -95,18 +95,18 @@ export const tattooStyles = [
 ];
 
 export const portfolioItems = [
-  { id: 1, title: "Serpiente y Rosas", style: "blackwork", size: "Grande", placement: "Manga Completa", description: "Una serpiente enrollada envuelta en rosas espinosas, ejecutada en blackwork audaz con sombreado de puntos intrincado.", color: "#1a1a2e", image: "https://images.unsplash.com/photo-1612459284970-e8f0003b53c5?auto=format&fit=crop&q=80&w=800" },
-  { id: 2, title: "Retrato de León", style: "realism", size: "Mediano", placement: "Brazo Superior", description: "Retrato hiperrealista de león capturando cada bigote y la intensidad de la mirada.", color: "#2d1f1f", image: "https://images.unsplash.com/photo-1542194600-b6339cc90ffb?auto=format&fit=crop&q=80&w=800" },
-  { id: 3, title: "Mapa de Constelaciones", style: "minimalist", size: "Pequeño", placement: "Muñeca Interior", description: "Patrón delicado de constelación representando a Orión, con estrellas de micro-puntos.", color: "#1a1a2e", image: "https://images.unsplash.com/photo-1590246814883-57832afa4e5b?auto=format&fit=crop&q=80&w=800" },
-  { id: 4, title: "Lobo Geométrico", style: "fineline", size: "Mediano", placement: "Antebrazo", description: "Un rostro de lobo descomponiéndose en fragmentos geométricos con trabajo de línea ultrafina.", color: "#1f2d1f", image: "https://images.unsplash.com/photo-1562916893-cb7be0a7fb0d?auto=format&fit=crop&q=80&w=800" },
-  { id: 5, title: "Guerrero Polinesio", style: "tribal", size: "Grande", placement: "Pecho", description: "Diseño polinesio tradicional que simboliza fuerza, coraje y orgullo ancestral.", color: "#2d2d1a", image: "https://images.unsplash.com/photo-1549420042-4fcf05a62f8b?auto=format&fit=crop&q=80&w=800" },
-  { id: 6, title: "Koi Japonés", style: "color", size: "Grande", placement: "Espalda Completa", description: "Pez koi vívido nadando contra corriente a través de olas, en paleta de colores japonesa tradicional.", color: "#1a2d2d", image: "https://images.unsplash.com/photo-1550993510-184589d97bd9?auto=format&fit=crop&q=80&w=800" },
-  { id: 7, title: "Fénix Renaciendo", style: "custom", size: "Grande", placement: "Espalda Completa", description: "Fénix de diseño personalizado emergiendo de llamas abstractas, simbolizando renacimiento y transformación.", color: "#2d1a2d", image: "https://images.unsplash.com/photo-1579782531652-32a58b8f2fd4?auto=format&fit=crop&q=80&w=800" },
-  { id: 8, title: "Mariposa Transformada", style: "coverup", size: "Mediano", placement: "Hombro", description: "Un tatuaje viejo y descolorido transformado magistralmente en una impresionante mariposa monarca.", color: "#1f1a2d", image: "https://images.unsplash.com/photo-1611505907314-5231c51322ab?auto=format&fit=crop&q=80&w=800" },
-  { id: 9, title: "Geometría Sagrada", style: "blackwork", size: "Mediano", placement: "Antebrazo", description: "Mandala intrincado con elementos de geometría sagrada, dotwork perfectamente simétrico.", color: "#1a1a1a", image: "https://images.unsplash.com/photo-1598371839696-5e5bb00b059e?auto=format&fit=crop&q=80&w=800" },
-  { id: 10, title: "Encuentro de Ojos", style: "realism", size: "Pequeño", placement: "Mano", description: "Diseño hiperrealista con detalle macro que da vida a la pura intensidad en la piel.", color: "#2d2617", image: "https://images.unsplash.com/photo-1560946221-a3f7495f50f4?auto=format&fit=crop&q=80&w=800" },
-  { id: 11, title: "Ola y Luna", style: "fineline", size: "Pequeño", placement: "Tobillo", description: "Delicada ola oceánica encontrándose con una luna creciente en trabajo de línea fina fluida.", color: "#17202d", image: "https://images.unsplash.com/photo-1550537687-c91072c4792d?auto=format&fit=crop&q=80&w=800" },
-  { id: 12, title: "Manga de Dragón", style: "color", size: "Grande", placement: "Manga Completa", description: "Dragón neo-tradicional en tonos joya ricos envolviendo todo el brazo.", color: "#2d171f", image: "https://images.unsplash.com/photo-1621217036739-1ffdb450411a?auto=format&fit=crop&q=80&w=800" },
+  { id: 1, title: "Serpiente y Rosas", style: "blackwork", size: "Grande", placement: "Manga Completa", description: "Una serpiente enrollada envuelta en rosas espinosas, ejecutada en blackwork audaz con sombreado de puntos intrincado.", color: "#1a1a2e", image: tattooStyles[0].image },
+  { id: 2, title: "Retrato de León", style: "realism", size: "Mediano", placement: "Brazo Superior", description: "Retrato hiperrealista de león capturando cada bigote y la intensidad de la mirada.", color: "#2d1f1f", image: tattooStyles[1].image },
+  { id: 3, title: "Mapa de Constelaciones", style: "minimalist", size: "Pequeño", placement: "Muñeca Interior", description: "Patrón delicado de constelación representando a Orión, con estrellas de micro-puntos.", color: "#1a1a2e", image: tattooStyles[2].image },
+  { id: 4, title: "Lobo Geométrico", style: "fineline", size: "Mediano", placement: "Antebrazo", description: "Un rostro de lobo descomponiéndose en fragmentos geométricos con trabajo de línea ultrafina.", color: "#1f2d1f", image: tattooStyles[3].image },
+  { id: 5, title: "Guerrero Polinesio", style: "tribal", size: "Grande", placement: "Pecho", description: "Diseño polinesio tradicional que simboliza fuerza, coraje y orgullo ancestral.", color: "#2d2d1a", image: tattooStyles[4].image },
+  { id: 6, title: "Koi Japonés", style: "color", size: "Grande", placement: "Espalda Completa", description: "Pez koi vívido nadando contra corriente a través de olas, en paleta de colores japonesa tradicional.", color: "#1a2d2d", image: tattooStyles[5].image },
+  { id: 7, title: "Fénix Renaciendo", style: "custom", size: "Grande", placement: "Espalda Completa", description: "Fénix de diseño personalizado emergiendo de llamas abstractas, simbolizando renacimiento y transformación.", color: "#2d1a2d", image: tattooStyles[6].image },
+  { id: 8, title: "Mariposa Transformada", style: "coverup", size: "Mediano", placement: "Hombro", description: "Un tatuaje viejo y descolorido transformado magistralmente en una impresionante mariposa monarca.", color: "#1f1a2d", image: tattooStyles[7].image },
+  { id: 9, title: "Geometría Sagrada", style: "blackwork", size: "Mediano", placement: "Antebrazo", description: "Mandala intrincado con elementos de geometría sagrada, dotwork perfectamente simétrico.", color: "#1a1a1a", image: tattooStyles[0].image },
+  { id: 10, title: "Encuentro de Ojos", style: "realism", size: "Pequeño", placement: "Mano", description: "Diseño hiperrealista con detalle macro que da vida a la pura intensidad en la piel.", color: "#2d2617", image: tattooStyles[1].image },
+  { id: 11, title: "Ola y Luna", style: "fineline", size: "Pequeño", placement: "Tobillo", description: "Delicada ola oceánica encontrándose con una luna creciente en trabajo de línea fina fluida.", color: "#17202d", image: tattooStyles[3].image },
+  { id: 12, title: "Manga de Dragón", style: "color", size: "Grande", placement: "Manga Completa", description: "Dragón neo-tradicional en tonos joya ricos envolviendo todo el brazo.", color: "#2d171f", image: tattooStyles[5].image },
 ];
 
 export const testimonials = [
@@ -230,7 +230,7 @@ export const featuredCampaigns = [
     price: "Desde $350",
     badge: "Solo Esta Semana",
     color: "#1a1a2e",
-    image: "https://images.unsplash.com/photo-1612459284970-e8f0003b53c5?auto=format&fit=crop&q=80&w=800",
+    image: tattooStyles[0].image,
   },
   {
     title: "Colección de Temporada",
@@ -239,7 +239,7 @@ export const featuredCampaigns = [
     price: "Desde $200",
     badge: "Nuevo",
     color: "#1f2d1f",
-    image: "https://images.unsplash.com/photo-1562916893-cb7be0a7fb0d?auto=format&fit=crop&q=80&w=800",
+    image: tattooStyles[3].image,
   },
   {
     title: "Flash Day Especial",
@@ -248,7 +248,7 @@ export const featuredCampaigns = [
     price: "$150 precio fijo",
     badge: "Cupos Limitados",
     color: "#2d1a2d",
-    image: "https://images.unsplash.com/photo-1590246814883-57832afa4e5b?auto=format&fit=crop&q=80&w=800",
+    image: tattooStyles[2].image,
   },
 ];
 

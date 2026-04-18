@@ -1,0 +1,266 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink-900: #0a0a0a;
+  --color-ink-800: #111111;
+  --color-ink-700: #1a1a1a;
+  --color-ink-600: #222222;
+  --color-ink-500: #333333;
+  --color-ink-400: #555555;
+  --color-ink-300: #888888;
+  --color-ink-200: #bbbbbb;
+  --color-ink-100: #e0e0e0;
+
+  --color-gold-500: #c9a84c;
+  --color-gold-400: #d4b85c;
+  --color-gold-300: #e0c96d;
+  --color-gold-600: #b8933a;
+
+  --color-crimson-500: #8b2035;
+  --color-crimson-400: #a52844;
+
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+  --font-brand: 'Cinzel Decorative', 'Playfair Display', serif;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--color-ink-900); }
+::-webkit-scrollbar-thumb { background: var(--color-ink-500); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-gold-500); }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  background-color: var(--color-ink-900);
+  color: var(--color-ink-100);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ========================================
+   MOZER BRAND TYPOGRAPHY
+   ======================================== */
+
+.brand-mozer {
+  font-family: var(--font-brand);
+  letter-spacing: 0.35em;
+  background: linear-gradient(
+    135deg,
+    #b8933a 0%,
+    #e0c96d 25%,
+    #c9a84c 50%,
+    #f0dca0 75%,
+    #b8933a 100%
+  );
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 6s ease infinite;
+  position: relative;
+  filter: drop-shadow(0 0 30px rgba(201, 168, 76, 0.15));
+}
+
+.brand-mozer-hero {
+  font-family: var(--font-brand);
+  letter-spacing: 0.4em;
+  background: linear-gradient(
+    135deg,
+    #a07830 0%,
+    #d4b85c 15%,
+    #f5e6a3 30%,
+    #c9a84c 50%,
+    #f5e6a3 70%,
+    #d4b85c 85%,
+    #a07830 100%
+  );
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 8s ease infinite;
+  filter: drop-shadow(0 0 60px rgba(201, 168, 76, 0.2)) drop-shadow(0 4px 20px rgba(0,0,0,0.5));
+  text-shadow: none;
+  position: relative;
+}
+
+.brand-mozer-hero::after {
+  content: 'MOZER';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(201,168,76,0.08), transparent, rgba(201,168,76,0.08));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: blur(8px);
+  z-index: -1;
+}
+
+@keyframes shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Brand decorative line */
+.brand-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--color-gold-500) 20%, var(--color-gold-300) 50%, var(--color-gold-500) 80%, transparent 100%);
+  opacity: 0.5;
+}
+
+.brand-line-thick {
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, var(--color-gold-600) 15%, var(--color-gold-400) 35%, var(--color-gold-300) 50%, var(--color-gold-400) 65%, var(--color-gold-600) 85%, transparent 100%);
+}
+
+/* ========================================
+   SCROLL REVEAL ANIMATIONS
+   ======================================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.stagger-children.visible > *:nth-child(1) { transition-delay: 0.05s; opacity: 1; transform: none; }
+.stagger-children.visible > *:nth-child(2) { transition-delay: 0.1s; opacity: 1; transform: none; }
+.stagger-children.visible > *:nth-child(3) { transition-delay: 0.15s; opacity: 1; transform: none; }
+.stagger-children.visible > *:nth-child(4) { transition-delay: 0.2s; opacity: 1; transform: none; }
+.stagger-children.visible > *:nth-child(5) { transition-delay: 0.25s; opacity: 1; transform: none; }
+.stagger-children.visible > *:nth-child(6) { transition-delay: 0.3s; opacity: 1; transform: none; }
+.stagger-children.visible > *:nth-child(7) { transition-delay: 0.35s; opacity: 1; transform: none; }
+.stagger-children.visible > *:nth-child(8) { transition-delay: 0.4s; opacity: 1; transform: none; }
+
+/* ========================================
+   TEXT EFFECTS
+   ======================================== */
+
+.glow-text {
+  text-shadow: 0 0 20px rgba(201, 168, 76, 0.3), 0 0 40px rgba(201, 168, 76, 0.1);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, var(--color-gold-400), var(--color-gold-600), var(--color-gold-300));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ========================================
+   CARDS & SURFACES
+   ======================================== */
+
+.glass-card {
+  background: rgba(26, 26, 26, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(201, 168, 76, 0.08);
+}
+
+.promo-card {
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.8), rgba(17, 17, 17, 0.9));
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(201, 168, 76, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+.promo-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-gold-500), transparent);
+}
+
+/* ========================================
+   DIVIDERS
+   ======================================== */
+
+.gold-divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-gold-500), transparent);
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+
+.lightbox-overlay {
+  animation: fadeIn 0.3s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 0.5; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+.whatsapp-pulse::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 9999px;
+  background: #25D366;
+  animation: pulse-ring 2s infinite;
+  z-index: -1;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes badge-glow {
+  0%, 100% { box-shadow: 0 0 8px rgba(201, 168, 76, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(201, 168, 76, 0.5); }
+}
+.badge-glow {
+  animation: badge-glow 2s ease-in-out infinite;
+}
+
+/* ========================================
+   TEXTURES
+   ======================================== */
+
+.grain-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+}
+
+/* ========================================
+   COPY TOAST
+   ======================================== */
+.copy-toast {
+  animation: slideUp 0.3s ease, fadeOutDelay 0.3s ease 2s forwards;
+}
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes fadeOutDelay {
+  to { opacity: 0; transform: translateY(-10px); }
+}
